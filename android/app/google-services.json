@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "915205673241",
+    "firebase_url": "https://musicalbum-f2da4.firebaseio.com",
+    "project_id": "musicalbum-f2da4",
+    "storage_bucket": "musicalbum-f2da4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915205673241:android:30572be3aecaa181c53588",
+        "android_client_info": {
+          "package_name": "com.musicalbum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915205673241-lmvrockcj1ogou06f71q0en4vtv5g20m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJjrecw6q7b34Hplm27ixGyx9YykizcOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915205673241-lmvrockcj1ogou06f71q0en4vtv5g20m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
