@@ -35,6 +35,15 @@ Get Test Coverage Report
 ```sh
 $ yarn test:coverage
 ```
+
 ## iOS Application Screenshot
 
-![Alt text](./screenshots/dashboard-ios?raw=true "Dashboard iOS")
+![Alt text](screenshots/dashboard-ios.png)
+![Alt text](screenshots/album-detail-ios.png)
+![Alt text](screenshots/music-player-ios.png)
+
+## Android Application Screenshot
+
+![Alt text](screenshots/dashboard-android.png)
+![Alt text](screenshots/album-detail-android.png)
+![Alt text](screenshots/music-player-android.png)
