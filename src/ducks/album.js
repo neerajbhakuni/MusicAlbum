@@ -9,16 +9,16 @@ export const types = {
 export const reducer = (state = SEARCH_INITIAL_STATE, action) => {
   switch (action.type) {
     case types.SEARCH_FETCH_REQUESTED:
-      return {...state, results: [], error: null, isloading: true};
+      return {...state, results: [], error: null, isLoading: true};
     case types.SEARCH_FETCH_SUCCEEDED:
       return {
         ...state,
         results: action.payload,
         error: null,
-        isloading: false,
+        isLoading: false,
       };
     case types.SEARCH_FETCH_ERROR:
-      return {...state, error: action.payload, isloading: false};
+      return {...state, error: action.payload, isLoading: false};
 
     default:
       return {...state};

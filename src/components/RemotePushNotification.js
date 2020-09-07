@@ -18,10 +18,7 @@ const RemotePushNotification = () => {
     });
 
     PushNotification.configure({
-      // (optional) Called when Token is generated (iOS and Android)
       onRegister: function (token) {},
-
-      // (optional) Called when the user fails to register for remote notifications. Typically occurs when APNS is having issues, or the device is a simulator. (iOS)
       onRegistrationError: function () {
         Alert.alert(
           'Allow Music Album App to access',
@@ -45,9 +42,7 @@ const RemotePushNotification = () => {
         );
       },
 
-      // (required) Called when a remote or local notification is opened or received
       onNotification: function (notification) {
-        // process the notification here
         if (notification) {
           const data =
             notification.foreground === true
@@ -56,30 +51,18 @@ const RemotePushNotification = () => {
           displayMesssage({...data});
         }
 
-        // (required) Called when a remote is received or opened, or local notification is opened
         notification.finish(PushNotificationIOS.FetchResult.NoData);
       },
-      // Android only: GCM or FCM Sender ID
+      //FIXME: Android only: GCM or FCM Sender ID
       senderID: config.FCMSenderId,
 
-      // IOS ONLY (optional): default: all - Permissions to register.
       permissions: {
         alert: true,
         badge: false,
         sound: true,
       },
 
-      // Should the initial notification be popped automatically
-      // default: true
       popInitialNotification: Platform.OS === 'ios' ? true : false,
-
-      /**
-       * (optional) default: true
-       * - Specified if permissions (ios) and token (android and ios) will requested or not,
-       * - if not, you must call PushNotificationsHandler.requestPermissions() later
-       * - if you are not using remote notification or do not have Firebase installed, use this:
-       *     requestPermissions: Platform.OS === 'ios'
-       */
       requestPermissions: true,
     });
   }, []);

@@ -6,7 +6,9 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "test:coverage": "jest --verbose --coverage",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -34,12 +36,18 @@
     "@babel/runtime": "^7.11.2",
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
     "eslint": "^7.8.1",
     "jest": "^26.4.2",
     "metro-react-native-babel-preset": "^0.63.0",
+    "react-dom": "^16.13.1",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-navigation-redux-helpers|@react-navigation/.*)"
+    ]
   }
 }
